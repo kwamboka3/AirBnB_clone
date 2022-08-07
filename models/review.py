@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Holds User class that inherits from BaseModel"""
+"""defines a review class that inherits from BaseModel"""
 from models.base_model import BaseModel
 
 
