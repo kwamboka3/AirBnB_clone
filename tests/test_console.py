@@ -643,7 +643,7 @@ class TestHBNBCommand_destroy(unittest.TestCase):
         with patch("sys.stdout", new=StringIO()) as output:
             obj = storage.all()["Review.{}".format(testID)]
             command = "show Review {}".format(testID)
-            self.assertFalse(HBNBCommand().onecmd(command))
+[O            self.assertFalse(HBNBCommand().onecmd(command))
             self.assertNotIn(obj, storage.all())
 
     def test_destroy_objects_dot_notation(self):
@@ -967,7 +967,7 @@ class TestHBNBCommand_update(unittest.TestCase):
         correct = "** no instance found **"
         with patch("sys.stdout", new=StringIO()) as output:
             self.assertFalse(HBNBCommand().onecmd("BaseModel.update(1)"))
-            self.assertEqual(correct, output.getvalue().strip())
+[I            self.assertEqual(correct, output.getvalue().strip())
         with patch("sys.stdout", new=StringIO()) as output:
             self.assertFalse(HBNBCommand().onecmd("User.update(1)"))
             self.assertEqual(correct, output.getvalue().strip())
